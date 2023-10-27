@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+}
+
+a {
+  display: block;
+}

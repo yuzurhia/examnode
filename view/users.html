@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Liste des Utilisateurs</h1>
+    <ul id="userList">
+      <!-- La liste des utilisateurs sera insérée ici -->
+    </ul>
+    <a href="/">Retour a la page d'accueil</a>
+
+    <script>
+      // Utilisez l'API Fetch pour récupérer les données JSON depuis le serveur
+      fetch("/students")
+        .then((response) => response.json())
+        .then((data) => {
+          const userList = document.getElementById("userList");
+          data.forEach((student) => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `${student.name} ${student.birth}`;
+            userList.appendChild(listItem);
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Supprimer";
+            listItem.appendChild(deleteButton);
+          });
+        })
+        .catch((error) => {
+          console.error("Erreur lors de la récupération des données :", error);
+        });
+    </script>
+  </body>
+</html>
