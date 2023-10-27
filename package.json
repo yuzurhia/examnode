@@ -1,0 +1,18 @@
+{
+  "name": "examnode",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "servers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon servers"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  }
+}
